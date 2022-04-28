@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registry</title>
+    <link rel="stylesheet" href="source/css/login.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="source/images/myLogo.png" alt="" class="logo">
+            <p>登录账号</p>
+            <div class="have-account">
+                没有账号？<a href="registry.html">点击注册></a>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <form method="POST" action="Login.do">
+            <div class="input">
+                <label for="user">用户名</label>
+                <div class="info">
+                    <input type="text" name="user" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="input pwd">
+                <label for="user">密码</label>
+                <div class="info">
+                    <input type="password" name="password" placeholder="请输入密码">
+                </div>
+                <div class="tip">请输入4-16位密码</div>
+            </div>
+            <center>
+                <input type="SUBMIT" class="box" value="登录"  style="background-color: #e2231a; color: #ffffff; line-height: 52px; font-size: 20px;text-align: center;cursor: pointer;">
+            </center>
+        </form>
+    </div>
+    <script src="source/javascript/registry.js"></script>
+</body>
+
+</html>

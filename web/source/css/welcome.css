@@ -1,0 +1,182 @@
+/* 初始化标签 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+em, i {
+    font-style: normal;
+}
+
+body {
+    background-color: #f5f6f7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    /*使图片与文字居中对齐*/
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 闭合浮动 */
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* 字体导入 */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('source/fonts/icomoon.eot?u4fele');
+    src: url('source/fonts/icomoon.eot?u4fele#iefix') format('embedded-opentype'), url('source/fonts/icomoon.ttf?u4fele') format('truetype'), url('source/fonts/icomoon.woff?u4fele') format('woff'), url('source/fonts/icomoon.svg?u4fele#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@keyframes grow {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 450px;
+        opacity: 100%;
+    }
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes reduce {
+    0% {
+        opacity: 100%;
+        height: 450px;
+    }
+
+    100% {
+        opacity: 0%;
+        height: 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-50%, -12%);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translate(-50%, 0%);
+        opacity: 100%;
+    }
+}
+
+@keyframes back {
+    0% {
+        opacity: 100%;
+        transform: translate(-50%, 0%);
+    }
+
+    100% {
+        opacity: 0%;
+        transform: translate(-50%,-12%);
+    }
+}
+
+.banner {
+    height: 600px;
+}
+
+.background {
+    width: 100%;
+    height: 740px;
+    position: absolute;
+    top: 0%;
+}
+
+.header {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 72px;
+}
+
+.showSub {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.logo{
+    float: left;
+    height: 72px;
+    width: 300px;
+    background-image: url(source/images/myLogo.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.items {
+    float: right;
+}
+
+.items>li {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin-right: 72px;
+    padding: 0 25px;
+    text-align: center;
+    line-height: 72px;
+}
+
+.items>li>a {
+    color: #f5f6f7;
+}
+
+.subList {
+    opacity: 0%;
+    position: absolute;
+    list-style: none;
+    overflow: hidden;
+    position: absolute;
+    top: 72px;
+    left: 50%;
+}
+
+.subList>li {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    white-space: nowrap;
+}

@@ -1,0 +1,108 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <!-- note that a listener is initialized before servlets and provide context to all servlets  -->
+<listener>
+    <listener-class>
+        com.example.web.MyServletContextListener
+    </listener-class>
+</listener>
+
+    <!-- note that context-param is used by all servlets -->
+<context-param>
+    <param-name>websiteOwner</param-name>
+    <param-value>vinayking</param-value>
+</context-param>
+
+<!-- <context-param> -->
+<!--     <param-name>breed</param-name> -->
+<!--     <param-value>tydi</param-value> -->
+<!-- </context-param> -->
+
+<jsp-config>
+    <jsp-property-group>
+            <!-- some configurations like <el-ignored></el-ignored> -->
+    </jsp-property-group>
+</jsp-config>
+
+<servlet>
+    <servlet-name>pdfInfoProvider</servlet-name>
+    <servlet-class>com.example.web.pdfInfo</servlet-class>
+</servlet>
+
+<servlet>
+    <servlet-name>CheckCookie</servlet-name>
+    <servlet-class>com.example.web.CheckCookie</servlet-class>
+</servlet>
+
+<servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.example.web.Login</servlet-class>
+</servlet>
+
+<!-- <servlet> -->
+<!--     <servlet-name>Dog Breed</servlet-name> -->
+<!--     <servlet-class>com.example.web.DogBreed</servlet-class> -->
+<!-- </servlet> -->
+
+<servlet>
+    <servlet-name>Ch3 Beer</servlet-name>
+    <servlet-class>com.example.web.BeerSelect</servlet-class>
+</servlet>
+
+<servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>com.example.web.Register</servlet-class>
+        <!-- note that init-param is only used inner specific servlet -->
+    <init-param>
+        <param-name>adminEmail</param-name>
+        <param-value>1780405714@qq.com</param-value>
+    </init-param>
+    <init-param>
+        <param-name>mainEmail</param-name>
+        <param-value>vinayking.kop@gmail.com</param-value>
+    </init-param>
+</servlet>
+
+<servlet>
+    <servlet-name>pdfReader</servlet-name>
+    <servlet-class>com.example.web.pdfReader</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>pdfInfoProvider</servlet-name>
+    <url-pattern>/pdfInfoProvider.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>CheckCookie</servlet-name>
+    <url-pattern>/CheckCookie.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login.do</url-pattern>
+</servlet-mapping>
+
+<!-- <servlet-mapping> -->
+<!--     <servlet-name>Dog Breed</servlet-name> -->
+<!--     <url-pattern>/Dog.breed</url-pattern> -->
+<!-- </servlet-mapping> -->
+
+<servlet-mapping>
+    <servlet-name>pdfReader</servlet-name>
+    <url-pattern>/PDF.read</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/Register.do</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>Ch3 Beer</servlet-name>
+    <url-pattern>/SelectBeer.do</url-pattern>
+</servlet-mapping>
+</web-app>

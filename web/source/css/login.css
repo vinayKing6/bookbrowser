@@ -1,0 +1,211 @@
+/* 初始化标签 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+em, i {
+    font-style: normal;
+}
+
+body {
+    background-color: #f5f6f7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    /*使图片与文字居中对齐*/
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 闭合浮动 */
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* 字体导入 */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('source/fonts/icomoon.eot?u4fele');
+    src: url('source/fonts/icomoon.eot?u4fele#iefix') format('embedded-opentype'), url('source/fonts/icomoon.ttf?u4fele') format('truetype'), url('source/fonts/icomoon.woff?u4fele') format('woff'), url('source/fonts/icomoon.svg?u4fele#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.header {
+    height: 110px;
+    box-shadow: -1px -1px 10px 3px rgba(0, 0, 0, .1);
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    height: 100%;
+}
+
+.logo {
+    height: 84px;
+    float: left;
+    margin-top: 9px;
+}
+
+.header .container p {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    line-height: 110px;
+    font-size: 25px;
+    color: #333333;
+}
+
+.have-account {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    color: #999999;
+}
+
+.have-account a {
+    color: #ee2222;
+}
+
+.form {
+    margin: auto;
+    margin-top: 200px;
+    width: 1200px;
+    height: 500px;
+    border-bottom: 1px solid gray;
+}
+
+.input {
+    position: relative;
+    margin: auto;
+    margin-top: 0px;
+    height: 86px;
+    width: 425px;
+}
+
+.input label {
+    display: block;
+    float: left;
+    display: inline-block;
+    height: 52px;
+    width: 108px;
+    padding-left: 20px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    line-height: 52px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.info {
+    float: left;
+    height: 52px;
+    width: 290px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-left: 0;
+}
+
+.input input {
+    float: left;
+    height: 50px;
+    width: 212px;
+    margin-left: 0;
+    border: 0;
+    background-color: #f5f6f7;
+}
+
+.input input:focus {
+    outline: 0;
+}
+
+.input input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, .3);
+}
+
+.tip {
+    position: absolute;
+    top: 54px;
+    height: 32px;
+    width: 100%;
+    font-size: 7px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, .3);
+}
+
+.right {
+    color: green;
+    padding-left: 20px;
+    background-image: url(source/images/ArrowForRight.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.wrong {
+    padding-left: 20px;
+    color: red;
+    background-image: url(source/images/wrong.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.input button {
+    height: 52px;
+    width: 75px;
+    float: right;
+    background-color: #f5f6f7;
+    border: 0;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+}
+
+.box {
+    height: 52px;
+    width: 425px;
+    margin: auto;
+}
+
+.check {
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.check:hover {
+    cursor: pointer;
+}
+
+.rule {
+    float: left;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 9px;
+    line-height: 20px;
+}
+
+.rule a {
+    color: #0066cc;
+}

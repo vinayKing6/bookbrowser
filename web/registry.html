@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registry</title>
+    <link rel="stylesheet" href="source/css/registry.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="source/images/myLogo.png" alt="" class="logo">
+            <p>注册账号</p>
+            <div class="have-account">
+                已有账号？<a href="login.html">点击登录></a>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <form method="POST" action="Register.do">
+            <div class="input">
+                <label for="user">用户名</label>
+                <div class="info">
+                    <input type="text" name="user" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="input pwd">
+                <label for="user">密码</label>
+                <div class="info">
+                    <input type="password" name="password" placeholder="请输入密码">
+                </div>
+                <div class="tip">请输入4-16位密码</div>
+            </div>
+            <div class="input">
+                <label for="user">手机号码</label>
+                <div class="info">
+                    <input type="text" name="phoneNumber" placeholder="请输入手机号码">
+                </div>
+            </div>
+            <div class="input">
+                <label for="user">验证码</label>
+                <div class="info">
+                    <input type="text" name="valid" placeholder="请输入验证码">
+                    <button>获取验证码</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="check"></div>
+                <div class="rule">
+                    我已阅读并同意<a href="#">《隐私协议》</a>
+                </div>
+            </div>
+            <center>
+                <input type="SUBMIT" class="box" value="注册"  style="background-color: #e2231a; color: #ffffff; line-height: 52px; font-size: 20px;text-align: center;cursor: pointer;">
+            </center>
+        </form>
+    </div>
+    <script src="source/javascript/registry.js"></script>
+</body>
+
+</html>

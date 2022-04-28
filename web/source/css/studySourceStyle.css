@@ -1,0 +1,573 @@
+/* 初始化标签 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+em, i {
+    font-style: normal;
+}
+
+body {
+    background-color: #f5f6f7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    /*使图片与文字居中对齐*/
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 闭合浮动 */
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* 字体导入 */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('source/fonts/icomoon.eot?u4fele');
+    src: url('source/fonts/icomoon.eot?u4fele#iefix') format('embedded-opentype'), url('source/fonts/icomoon.ttf?u4fele') format('truetype'), url('source/fonts/icomoon.woff?u4fele') format('woff'), url('source/fonts/icomoon.svg?u4fele#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@keyframes grow {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 450px;
+        opacity: 100%;
+    }
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes reduce {
+    0% {
+        opacity: 100%;
+        height: 450px;
+    }
+
+    100% {
+        opacity: 0%;
+        height: 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-50%, -12%);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translate(-50%, 0%);
+        opacity: 100%;
+    }
+}
+
+@keyframes back {
+    0% {
+        opacity: 100%;
+        transform: translate(-50%, 0%);
+    }
+
+    100% {
+        opacity: 0%;
+        transform: translate(-50%,-12%);
+    }
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    height: 42px;
+    margin: 30px auto;
+}
+
+.showSub {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.logo {
+    position: relative;
+    float: left;
+    width: 198px;
+    height: 42px;
+    overflow: hidden;
+    /*父元素对溢出的子元素进行隐藏*/
+}
+
+.logo img {
+    position: absolute;
+    height: 60px;
+    top: -10px;
+    left: -70px;
+    transition: left .5s;
+}
+
+.logo img:hover {
+    left: 0;
+}
+
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+.items {
+    float: left;
+}
+
+.items>li {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin-right: 16px;
+    padding: 0 25px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.items>li>a {
+    color: black;
+}
+
+.subList {
+    display: none;
+    opacity: 0%;
+    position: absolute;
+    list-style: none;
+    overflow: hidden;
+    position: absolute;
+    /* top: 72px; */
+    left: 50%;
+    z-index: 300;
+}
+
+.subList>li {
+    padding: 10px 60px;
+    line-height: 36px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.search {
+    float: left;
+    height: 42px;
+    margin-left: 50px;
+}
+
+.search input {
+    float: left;
+    width: 200px;
+    height: 40px;
+    border: 1px #00a4ff solid;
+    border-right: 0;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+    border-radius: 0%;
+    outline: none;
+    /*取消文本框边框样式*/
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    background-color: #00a4ff;
+    border: 0;
+    border-radius: 0%;
+    font-family: 'icomoon';
+    line-height: 42px;
+    font-size: 14px;
+    color: #000;
+}
+
+.user {
+    float: right;
+    height: 42px;
+    margin-right: 30px;
+    line-height: 42px;
+    color: gray;
+}
+
+.user>img {
+    vertical-align: middle;
+    /*使图片与文字垂直居中对齐，对块级元素无效*/
+}
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .box1 {
+    height: 420px;
+}
+
+.banner .box1 .image1 {
+    position: relative;
+    /*相对定位，为绝对定位的子元素提供参照，占用位置*/
+    float: right;
+    height: 420px;
+    width: 1010px;
+}
+
+.banner .box1 .image1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .box1 .image1 .gotoBar {
+    position: absolute;
+    /*绝对定位*/
+    left: 50%;
+    bottom: 15px;
+    width: 150px;
+    height: 20px;
+    margin-left: -75px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.banner .box1 .image1 .prev {
+    display: inline-block;
+    position: absolute;
+    width: 36px;
+    height: 66px;
+    top: 50%;
+    margin-top: -18px;
+    left: 0;
+    border-top-right-radius: 33px;
+    border-bottom-right-radius: 33px;
+    background-color: rgba(0, 0, 0, .2);
+    line-height: 66px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.banner .box1 .image1 .afterv {
+    display: inline-block;
+    position: absolute;
+    width: 36px;
+    height: 66px;
+    top: 50%;
+    margin-top: -18px;
+    right: 0;
+    border-top-left-radius: 33px;
+    border-bottom-left-radius: 33px;
+    background-color: rgba(0, 0, 0, .2);
+    line-height: 66px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.banner .box1 .image1 .gotoBar a {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 5px 0;
+    margin-left: 19px;
+}
+
+.banner .box1 .image1 .gotoBar a:hover {
+    background-color: #00a4ff;
+}
+
+.banner .box1 .subnav {
+    float: left;
+    width: 190px;
+    height: 420px;
+    background: rgba(0, 0, 0, .3);
+}
+
+.subnav ul li {
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.subnav ul li a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.subnav ul li a::after {
+    position: absolute;
+    right: 0;
+    content: '>';
+}
+
+.subnav ul li a:hover {
+    color: #00a4ff;
+}
+
+.goods {
+    margin-top: 10px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+    box-shadow: -1px -1px 20px 4px rgba(0, 0, 0, .1);
+}
+
+.goods h3 {
+    float: left;
+    color: #00a4ff;
+    font-size: 16px;
+    margin-left: 30px;
+}
+
+.goods ul {
+    float: left;
+    margin-left: 30px;
+}
+
+.goods ul li {
+    float: left;
+}
+
+.goods ul li a {
+    padding: 0 30px;
+    color: #050505;
+    border-left: 1px solid #ccc;
+}
+
+.goods .mod {
+    float: right;
+    font-size: 14px;
+    margin-right: 30px;
+    color: #00a4ff;
+}
+
+.command-hd {
+    margin-top: 30px;
+    height: 45px;
+}
+
+.command-hd h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+.command-hd a {
+    float: right;
+    color: #a5a5a5;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.command-hb li {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 270px;
+    margin-right: 12.5px;
+    margin-bottom: 12.5px;
+    background-color: #fff;
+    border-radius: 10px;
+    /* transition: 变化的属性 花费时间 运动曲线（默认ease） 何时开始（默认）; */
+    transition: box-shadow .5s;
+}
+
+/*css3:nth-child() 可填数字，偶数：even,奇数：odd 函数:n,5n....n从0开始取，超出自动*/
+
+.command-hb li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.command-hb li:hover {
+    box-shadow: -1px -1px 20px 4px rgba(0, 0, 0, .2);
+}
+
+.command-hb li .image {
+    position: relative;
+    width: 230px;
+    height: 122px;
+}
+
+.command-hb li .image img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+}
+
+.command-hb li .image .playIcon {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 230px;
+    height: 122px;
+    background-image: url(source/images/playIcon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.command-hb li .image:hover img {
+    opacity: 50%;
+}
+
+.command-hb li .image:hover .playIcon {
+    display: block;
+}
+
+.command-hb li em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+
+.command-hb li h3 {
+    margin: 20px 20px;
+    font-size: 14px;
+    color: #000;
+    font-weight: lighter;
+}
+
+.command-hb li .info {
+    margin: 20px 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #a5a5a5;
+    font-size: 5px;
+}
+
+.command-hb li .info a {
+    font-size: 14px;
+    color: orange;
+}
+
+.goToPages {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.goToPages>a {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid rgb(201, 199, 199);
+    border-radius: 5px;
+}
+
+.goToPages>a:hover {
+    background-color: #f5f6f7;
+}
+
+.goToPages .current {
+    border: none;
+    background-color: #f5f6f7;
+}
+
+.goToPages .btn{
+    margin-left: 20px;
+}
+
+.goToPages .time{
+    position: absolute;
+    display: inline-block;
+    height: 22.4px;
+    line-height: 22.4px;
+    top: 10px;
+    margin-left: 10px;
+}
+
+.footer {
+    margin-top: 50px;
+    height: 250px;
+    background-color: white;
+}
+
+.footer .box2 .copyright {
+    float: left;
+    margin-top: 30px;
+}
+
+.footer .box2 .copyright img {
+    margin-bottom: 15px;
+}
+
+.footer .box2 .copyright p {
+    font-size: 12px;
+    color: #666;
+}
+
+.footer .box2 .copyright a {
+    display: inline-block;
+    margin-top: 20px;
+    width: 118px;
+    height: 30px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 30px;
+    color: #00a4ff;
+    font-size: 16px;
+}
+
+.gotoTop {
+    display: inline-block;
+    position: fixed;
+    /*固定定位，不占用位置，相对定位占位置，绝对定位不占用位置但要求祖先是相当定位*/
+    left: 50%;
+    bottom: 20px;
+    margin-left: 615px;
+    width: 60px;
+    height: 60px;
+    background-image: url(source/images/upArrow.png);
+    background-color: rgba(0, 0, 0, .2);
+}
